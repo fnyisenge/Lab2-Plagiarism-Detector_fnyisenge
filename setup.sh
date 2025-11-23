@@ -1,11 +1,18 @@
 #!/bin/bash
-# setup.sh - create folders and the setup log
+# setup.sh - initialize environment and record setup details
 
-echo "---- Setup started on the $(date) ----" >> setup.log
+{
+    echo "---- Setup started on the $(date) ----"
 
-mkdir -p essays reports
+    # Create directories
+    mkdir -p essays
+    mkdir -p reports
 
-echo "Directories were created successfully: essays, reports" >> setup.log
-echo "Setup complete!" >> setup.log
-echo "---- End of log ----" >> setup.log
+    echo "Directories were created successfully: essays, reports"
+    echo "Setup complete!"
+    echo "---- End of log ----"
+} >> setup.log
+
+# Final confirmation message
 echo "Setup successfully completed!"
+
